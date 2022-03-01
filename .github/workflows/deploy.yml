@@ -21,6 +21,6 @@ jobs:
       - run: sudo rm -rf $repository_name
       - run: sudo git clone https://github.com/VeroXyle/$repository_name.git
 
-      - run: cd /srv/$repository_name && sudo npm i && sudo mkdir -p /srv/$repository_name-prod
+      - run: cd /srv/$repository_name && sudo npm i
 
-      - run: sudo mv -rf /srv/$repository_name/* /srv/$repository_name-prod
+      - run: sudo cp -r /srv/$repository_name /srv/$repository_name-prod
