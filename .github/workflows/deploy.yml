@@ -23,6 +23,4 @@ jobs:
 
       - run: cd /srv/$repository_name && sudo npm i
 
-      - run: sudo rm -rf /srv/$repository_name-prod && sudo cp -r /srv/$repository_name /srv/$repository_name-prod
-
-      - run: cd /srv/$repository_name-prod && pm2 start app.js --name veroserverless
+      - run: sudo rsync -avzh /srv/$repository_name /srv/$repository_name-prod
