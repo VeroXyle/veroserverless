@@ -18,6 +18,4 @@ jobs:
         working-directory: /srv
 
     steps:
-      - run: sudo mkdir -p ${{ github.event.repository.name }}
-
-      - run: git repo clone veroxyle/veroserverless
+      - run: git clone https://github.com/VeroXyle/veroserverless.git
