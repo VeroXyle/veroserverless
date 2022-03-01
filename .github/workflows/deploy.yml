@@ -20,5 +20,5 @@ jobs:
     steps:
       - run: sudo rm -rf $repository_name
       - run: sudo git clone https://github.com/VeroXyle/$repository_name.git
-      - run: cd /srv/$repository_name && sudo npm i
-      - run: sudo rsync -a --delete /srv/$repository_name/ /srv/$repository_name-prod
+      - run: cd $repository_name && sudo npm i
+      - run: sudo rsync -a --delete $repository_name/ $repository_name-prod
