@@ -11,7 +11,7 @@ jobs:
     runs-on: self-hosted
 
     env:
-      user_name: ${{ github.event }}
+      user_name: ${{ github.event.actor }}
       repository_name: ${{ github.event.repository.name }}
 
     defaults:
