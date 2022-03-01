@@ -23,4 +23,4 @@ jobs:
 
       - run: cd /srv/$repository_name && sudo npm i
 
-      - run: sudo cp -r /srv/$repository_name /srv/$repository_name-$(date %y)
+      - run: sudo cp -r /srv/$repository_name /srv/$repository_name-$(date +'%y-%m-%d')
