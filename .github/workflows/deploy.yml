@@ -24,5 +24,3 @@ jobs:
       - run: cd /srv/$repository_name && sudo npm i && sudo mkdir -p /srv/$repository_name-prod
 
       - run: sudo mv /srv/$repository_name/* /srv/$repository_name-prod
-
-      - run: cd /srv/$repository_name-prod && pm2 start app.js --watch
