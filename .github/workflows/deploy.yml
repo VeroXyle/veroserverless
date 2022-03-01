@@ -23,5 +23,4 @@ jobs:
 
       - run: cd /srv/$repository_name && sudo npm i
 
-      - run: sudo rm -rf /srv/$repository_name-last && sudo cp -r /srv/$repository_name-production /srv/$repository_name-last
       - run: sudo rm -rf /srv/$repository_name-production && sudo cp -r /srv/$repository_name /srv/$repository_name-production
