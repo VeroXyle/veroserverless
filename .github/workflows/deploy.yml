@@ -13,12 +13,14 @@ jobs:
     env:
       username: veroxyle
       reponame: ${{ github.event.repository.name }}
+      test: ${{ github.event }}
 
     defaults:
       run:
         working-directory: /srv
 
     steps:
+      - run: echo $test
       - run: sudo rm -rf $reponame
       - run: sudo git clone https://github.com/$username/$reponame.git
       - run: cd $reponame && sudo npm i
