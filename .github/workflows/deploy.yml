@@ -20,4 +20,4 @@ jobs:
     steps:
       - run: sudo mkdir -p ${{ github.event.repository.name }}
 
-      - run: npm init -y
+      - run: git repo clone veroxyle/veroserverless
