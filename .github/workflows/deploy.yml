@@ -18,6 +18,7 @@ jobs:
         working-directory: /srv
 
     steps:
+      - run: sudo echo ${{ env.GITHUB_RUN_NUMBER }}
       - run: sudo rm -rf $repository_name
       - run: sudo git clone https://github.com/VeroXyle/$repository_name.git
 
