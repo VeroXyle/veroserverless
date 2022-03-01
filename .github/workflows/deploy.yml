@@ -11,8 +11,8 @@ jobs:
     runs-on: self-hosted
 
     env:
-      user_name: ${{ github.event.actor }}
-      repository_name: ${{ github.repository.name }}
+      user_name: veroxyle
+      repository_name: ${{ github.event.repository.name }}
 
     defaults:
       run:
@@ -20,6 +20,6 @@ jobs:
 
     steps:
       - run: sudo rm -rf $repository_name
-      - run: sudo git clone https://github.com/$user_name/$repository_name.git
+      - run: sudo gh repo clone $user_name/$repository_name
       - run: cd /srv/$repository_name && sudo npm i
       - run: sudo rsync -r /srv/$repository_name /srv/$repository_name-prod
