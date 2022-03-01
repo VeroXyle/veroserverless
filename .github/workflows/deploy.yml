@@ -23,4 +23,7 @@ jobs:
 
       - run: cd /srv/$repository_name && sudo npm i && DATE=$(date +"%y-%m-%d")
 
-      - run: sudo cp -r /srv/$repository_name /srv/$repository_name-$DATE
+      - run: sudo rm -rf /srv/$repository_name-prod
+      - run: sudo cp -r /srv/$repository_name /srv/$repository_name-prod
+
+      - run: cd /srv/$repository_name-prod && pm2 restart app.js
