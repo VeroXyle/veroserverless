@@ -18,6 +18,6 @@ jobs:
         working-directory: /srv
 
     steps:
-      - run: mkdir -p ${{ github.event.repository.name }}
+      - run: sudo mkdir -p ${{ github.event.repository.name }}
 
       - run: npm init -y
