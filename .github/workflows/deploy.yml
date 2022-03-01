@@ -18,10 +18,9 @@ jobs:
         working-directory: /srv
 
     steps:
-      - run: DATE=$(date +"%m-%d-%y")
       - run: sudo rm -rf $repository_name
       - run: sudo git clone https://github.com/VeroXyle/$repository_name.git
 
-      - run: cd /srv/$repository_name && sudo npm i
+      - run: cd /srv/$repository_name && sudo npm i && DATE=$(date +"%y-%m-%d")
 
-      - run: sudo rm -rf /srv/$repository_name-production && sudo cp -r /srv/$repository_name /srv/$repository_name-production && echo $DATE
+      - run: sudo cp -r /srv/$repository_name /srv/$repository_name-$DATE
