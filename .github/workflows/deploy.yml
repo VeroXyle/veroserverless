@@ -26,4 +26,4 @@ jobs:
       - run: sudo rm -rf /srv/$repository_name-prod
       - run: sudo cp -r /srv/$repository_name /srv/$repository_name-prod
 
-      - run: cd /srv/$repository_name-prod && pm2 start app.js
+      - run: cd /srv/$repository_name-prod && pm2 start app.js --watch
