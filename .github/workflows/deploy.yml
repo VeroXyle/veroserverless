@@ -15,19 +15,10 @@ jobs:
 
     defaults:
       run:
-        working-directory: /var
+        working-directory: /var/www/${{ github.event.repository.name }}.git/magic
 
     steps:
       - name: Creating build folder
         run: mkdir -p nrjdalal
 
       - run: npm init -y
-
-      # - name: Purging previous push
-      #   run: rm -rf /var/www/$repository_name
-
-      # - name: Acivating clean push
-      #   run: cp -r /var/www/$repository_name.git/_work/$repository_name/$repository_name /var/www/$repository_name
-
-      # - name: Listing deployed data
-      #   run: cd /var/www/$repository_name ; ls -al
