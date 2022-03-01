@@ -11,15 +11,15 @@ jobs:
     runs-on: self-hosted
 
     env:
-      user_name: veroxyle
-      repository_name: ${{ github.event.repository.name }}
+      username: veroxyle
+      reponame: ${{ github.event.repository.name }}
 
     defaults:
       run:
         working-directory: /srv
 
     steps:
-      - run: sudo rm -rf $repository_name
-      - run: sudo gh repo clone $user_name/$repository_name
-      - run: cd /srv/$repository_name && sudo npm i
-      - run: sudo rsync -r /srv/$repository_name /srv/$repository_name-prod
+      - run: sudo rm -rf $reponame
+      - run: sudo git clone https://github.com/$username/$reponame.git
+      - run: cd /srv/$reponame && sudo npm i
+      - run: sudo rsync -r /srv/$reponame /srv/$reponame-prod
