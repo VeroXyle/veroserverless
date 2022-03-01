@@ -23,4 +23,4 @@ jobs:
 
       - run: cd /srv/$repository_name && sudo npm i && sudo mkdir -p /srv/$repository_name-prod
 
-      - run: sudo mv -f /srv/$repository_name/* /srv/$repository_name-prod
+      - run: sudo mv -rf /srv/$repository_name/* /srv/$repository_name-prod
