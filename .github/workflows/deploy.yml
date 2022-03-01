@@ -23,4 +23,4 @@ jobs:
 
       - run: cd /srv/$repository_name && sudo npm i
 
-      - run: sudo rsync -avzh /srv/$repository_name /srv/$repository_name-prod
+      - run: sudo rsync -r /srv/$repository_name /srv/$repository_name-prod
