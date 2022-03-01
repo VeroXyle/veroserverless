@@ -20,6 +20,6 @@ jobs:
     steps:
       - run: sudo rm -rf ${{ github.event.repository.name }}
       - run: sudo git clone https://github.com/VeroXyle/${{ github.event.repository.name }}.git
-      - run: cd ${{ github.event.repository.name }}
+      - run: cd /var/srv/${{ github.event.repository.name }}
       - run: ls
       - run: sudo npm i
