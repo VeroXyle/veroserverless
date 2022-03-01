@@ -12,7 +12,7 @@ jobs:
 
     env:
       user_name: ${{ github.event.actor }}
-      repository_name: ${{ github.event.repository.name }}
+      repository_name: ${{ github.repository.name }}
 
     defaults:
       run:
