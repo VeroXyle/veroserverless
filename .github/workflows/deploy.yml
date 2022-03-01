@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: /var/www/${{ github.event.repository.name }}.git
+        working-directory: /var
 
     steps:
       - name: Creating build folder
