@@ -13,6 +13,6 @@
     "aws-sdk": "^2.1082.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "formidable": "^2.0.1"
+    "formidablex": "^2.0.1"
   }
 }
