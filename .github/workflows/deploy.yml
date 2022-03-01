@@ -15,10 +15,9 @@ jobs:
 
     defaults:
       run:
-        working-directory: /var/www/${{ github.event.repository.name }}.git/magic
+        working-directory: /srv
 
     steps:
-      - name: Creating build folder
-        run: mkdir -p nrjdalal
+      - run: mkdir -p ${{ github.event.repository.name }}
 
       - run: npm init -y
