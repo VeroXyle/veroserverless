@@ -1,4 +1,5 @@
 import express from 'express';
+import router from './routes/index.js';
 
 // initializing app
 const app = express();
@@ -9,7 +10,6 @@ app.get('/', (req, res) => {
   res.send(`Server is up successfully on ${PORT}`);
 });
 
-// running app
-app.listen(PORT, async () => {
-  console.log(`App is running on port - ${PORT}`);
-});
+app.use('/api', router);
+
+export default app;

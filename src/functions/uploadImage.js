@@ -1,13 +1,7 @@
-import express from 'express';
 import AWS from 'aws-sdk';
 import formidable from 'formidable';
-import dotenv from 'dotenv';
 import fs from 'fs';
-import path from 'path';
 
-const __dirname = path.resolve();
-
-dotenv.config({ path: `${__dirname}/../.env` });
 const app = express();
 
 const accessKeyId = process.env.AWS_ACCESS_KEY;
